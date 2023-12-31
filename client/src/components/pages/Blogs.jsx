@@ -10,12 +10,13 @@ const Blogs = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:`+ import.meta.env.REACT_APP_PORT +`/api/blogs`,
+          `http://localhost:34334/api/blogs`,
           {
             headers: { serv: import.meta.env.REACT_APP_SERV },
           }
         );
         if (!response.ok) {
+          console.log(import.meta.env.REACT_APP_SERV)
           throw new Error("Unauthorized");
         }
         else{
