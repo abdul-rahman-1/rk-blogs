@@ -1,0 +1,153 @@
+.nft {
+  user-select: none;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+}
+.nft2 {
+  user-select: none;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 80%;
+}
+.nftfull {
+  user-select: none;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+}
+.fullimg{
+  aspect-ratio: 16/9;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: .45s ease;
+}
+.imgcont{
+  overflow: hidden;
+  border-radius: 15px;
+  transition: .45s ease;
+  padding: 0;
+}
+.main2:hover .fullimg {
+  transform: scale(1.03);
+}
+.nftmain {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  padding: 1rem;
+}
+.bol {
+  height: 90%;
+  padding: 1rem;
+  display: flex;
+  border-radius: 20px;
+  overflow-y: scroll;
+  justify-content: center;
+}
+.bol::-webkit-scrollbar-track {
+  background-color: #254f49;
+}
+
+.bol::-webkit-scrollbar {
+  width: 10px;
+}
+
+.bol::-webkit-scrollbar-thumb {
+  background-color: #427f77;
+}
+.nft hr {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #88888855;
+  margin-top: 0;
+}
+p {
+  margin: 0;
+}
+.nft ins {
+  text-decoration: none;
+}
+.nft .main {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 1rem;
+}
+.nft2 .main2 {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+  height: fit-content;
+  margin: 0;
+}
+.main .text {
+  margin: 1rem;
+}
+.nft .main .tokenImage {
+  aspect-ratio: 16/9;
+  border-radius: 0.5rem;
+  width: 100%;
+  object-fit: cover;
+}
+.nft .main .description {
+  margin: 0.5rem 0;
+  color: #8f76e4;
+}
+.price {
+  text-align: center;
+}
+.duration {
+  text-align: center;
+}
+.nft .main .creator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.2rem;
+  margin-bottom: -0.3rem;
+}
+.col-md-5 {
+  background: linear-gradient(45deg, #2b3038 0%, #20003b80 100%);
+  border: 1px solid #ffffff31;
+  border-radius: 0.7rem;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  overflow: hidden;
+  padding: 0rem;
+  margin: 1rem;
+  transition: 0.5s all;
+}
+.col-md-5:hover {
+  border: 1px solid #ffffff46;
+  box-shadow: 0 7px 50px 10px #00000000;
+  transform: scale(1.02);
+  filter: brightness(1.2);
+}
+.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Adjust the number of lines to display before truncating */
+  -webkit-box-orient: vertical;
+  max-height: 3em; /* Adjust the maximum height of the content */
+}
+
+.description.expanded {
+  overflow: visible;
+  white-space: normal;
+  display: block;
+  max-height: none; /* Remove the maximum height on expansion */
+}
