@@ -1,10 +1,12 @@
 import express from "express";
 import { MongoClient } from "mongodb";
 import cors from "cors";
+import dotenv from "dotenv";
+dotenv.config({ path: './.env' });
 
 const app = express();
-const port = 34334;
-const serv = `abdul1234`;
+const port = process.env.PORT;
+const serv = process.env.SERV;
 const baseUrl = `http://localhost:${port}`;
 
 app.use(cors());
@@ -22,7 +24,7 @@ app.get("/api/blogs", async (req, res) => {
 
   let client;
   try {
-    const mongoUri = `mongodb+srv://AdminClint0001:uTYZ4fPph7whTpXC@cluster0.eifjnhd.mongodb.net/Blog`;
+    const mongoUri = process.env.MONGODB_URL;
     client = new MongoClient(mongoUri, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
@@ -44,5 +46,5 @@ app.get("/api/blogs", async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server Is Active and Connected to Mongodb And Full Secured  `+baseUrl + ` `+  serv);
+  console.log(`Server Is Active and Connected to MongoDB And Fully Secured at ${baseUrl}`);
 });
